@@ -894,6 +894,7 @@ def start_mavproxy(opts, stuff):
                     cmd.extend(["--out", str(wsl2_host_ip_str) + ":" + str(port)])
                 else:
                     cmd.extend(["--out", "127.0.0.1:" + str(port)])
+                    cmd.extend(["--out", "127.0.0.1:" + str(port+1)])
 
         if not opts.mcast:
             if opts.udp:
